@@ -19,6 +19,6 @@ for (let i=1; i<=n; i++){ //loop for length of n
         }
         string+=char //add the character to the string
     }
-    count-- //
+    count-- 
     console.log(string)
 }
