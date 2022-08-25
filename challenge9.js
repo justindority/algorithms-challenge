@@ -8,6 +8,7 @@ const arcadeScores = (leaderboard,currentScores) => {
     for(const score of currentScores){
         allscores.push(score)
     }
+    
     //sort it by score, reverse it
     allscores.sort((a,b) => {return a-b})
     allscores.reverse()

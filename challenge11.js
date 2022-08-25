@@ -74,15 +74,18 @@ const frequencyChanges = [ 12, -10, -4, -8, 18, -1, -13,
     firstDuplicate = 0
 
 
-
-    for (const num of frequencyChanges) {
-        total += num
-        frequencyArray.push(total)
-        dupeCheck = frequencyArray.find(f => {return f === total})
-        if(dupeCheck){
-            firstDuplicate = dupeCheck
+//continute to loop until firstDuplicate changes from 9
+while (firstDuplicate === 0){
+    for (const num of frequencyChanges) { //iterate array
+        total += num //add the frequency change
+        dupeCheck = frequencyArray.find(f => {return f === total}) //check the new array for a duplicate
+        if(dupeCheck){ //if a duplicate value was found
+            firstDuplicate = dupeCheck //set to the duplicate value and end loop
             break
         }
+        frequencyArray.push(total) //push the total to the array that we check for duplicates
     }
+}
 
-    console.log(firstDuplicate)
+
+console.log(firstDuplicate)

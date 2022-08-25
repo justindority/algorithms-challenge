@@ -108,14 +108,14 @@ let finalNumber = 0
 
 fuelRequirements = moduleMasses.map(mod => {
 let number = mod
-    if((number%3)===0){
-        finalNumber = (number/3) - 2
-    } else if(((number-1)%3)===0){
-        finalNumber = ((number - 1)/3) - 2
-    } else if(((number-2)%3)===0){
-        finalNumber = ((number-2)/3) - 2
+    if((number%3)===0){ //if number is divisible by 3
+        finalNumber = (number/3) - 2 //divide by 3, round down
+    } else if(((number-1)%3)===0){ //else if number minus 1 is divisible by 3
+        finalNumber = ((number - 1)/3) - 2 //do that and subtract 2
+    } else if(((number-2)%3)===0){ //else if number minus 2 is divisible by 3
+        finalNumber = ((number-2)/3) - 2 //do that and subtract 2
     }
-    total += finalNumber
+    total += finalNumber //add that number to the running total
 })
 
 console.log(total)
